@@ -8,8 +8,10 @@ const apiKey = "1234"
 
 dotenv.config();
 
+const openaiApiKey = process.env.OPENAI_API_KEY;
+
 app.get("/", (req: Request, res: Response) => {
-  res.send(process.env.OPENAI_API_KEY || apiKey);
+  res.send("Hello, World!");
 });
 
 app.listen(port, () => {
